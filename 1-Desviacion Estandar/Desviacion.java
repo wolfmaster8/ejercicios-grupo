@@ -26,8 +26,20 @@ public class Desviacion
             cantidad--;
             contador++;
         }
+        double promedio = calculaPromedio(numeros);
         
         
         
+    }
+    
+        public static double calculaPromedio(int[] numeros){
+        //entra a la matriz y calcula el promedio
+        double promedio;
+        double suma = 0;
+        for(int i = 0; i<numeros.length; i++){
+            suma = suma + numeros[i];
+        }
+        promedio = suma/numeros.length;
+        return promedio;
     }
 }
