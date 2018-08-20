@@ -36,5 +36,20 @@ public class Vectores
             cantidad--;
             contador++;
         }
+        pequena(n1, n2);
+    }
+    
+    public static void pequena(int[] n1, int[] n2){
+        //matriz mas pequena
+        
+        int len1, len2;
+        len1 = n1.length;
+        len2 = n2.length;
+        
+        if(len1>=len2){
+            //evalua la matriz 2 en la 1
+        }else{
+            //evalua la matriz 1 en la 2
+        }
     }
 }
