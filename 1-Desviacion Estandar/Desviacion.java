@@ -2,11 +2,10 @@
 /**
  *
  * @authors Felipe Lobo, Alexis Chacon, Sergio Baron, Pablo Roman
- * @version 0.3a
+ * @version 0.1a
  */
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.List;
+import java.lang.*;
 public class Desviacion
 {
     public static void main(String[] args){
@@ -28,12 +27,13 @@ public class Desviacion
         }
         double promedio = calculaPromedio(numeros);
         double sumatoria = calculaSumatoria(numeros, promedio);
+        double desviacion = calculaDesviacion(numeros, sumatoria);
+        System.out.println("La desviación estándar es: "+desviacion);
         
-         System.out.println("La sumatoria es: "+sumatoria);
-        
+        //alexis
     }
     
-        public static double calculaPromedio(int[] numeros){
+    public static double calculaPromedio(int[] numeros){
         //entra a la matriz y calcula el promedio
         double promedio;
         double suma = 0;
@@ -44,7 +44,7 @@ public class Desviacion
         return promedio;
     }
     
-      public static double calculaSumatoria(int[] numeros, double promedio){
+    public static double calculaSumatoria(int[] numeros, double promedio){
         //calcula la sumatoria
         
         double sumatoria = 0;
@@ -54,5 +54,13 @@ public class Desviacion
         
         return sumatoria;
     }
-
+    
+    public static double calculaDesviacion(int[] numeros, double sumatoria){
+        //calcula la desviacion estandar
+        double desviacion = 0;
+        double formula = (1/((double)numeros.length - 1));
+        desviacion = Math.sqrt(formula*sumatoria);
+        return desviacion;
+        
+    }
 }
