@@ -27,8 +27,9 @@ public class Desviacion
             contador++;
         }
         double promedio = calculaPromedio(numeros);
+        double sumatoria = calculaSumatoria(numeros, promedio);
         
-        
+         System.out.println("La sumatoria es: "+sumatoria);
         
     }
     
@@ -42,4 +43,16 @@ public class Desviacion
         promedio = suma/numeros.length;
         return promedio;
     }
+    
+      public static double calculaSumatoria(int[] numeros, double promedio){
+        //calcula la sumatoria
+        
+        double sumatoria = 0;
+        for(int i = 0; i<numeros.length; i++){
+            sumatoria = sumatoria + Math.pow((numeros[i]-promedio),2);
+        }
+        
+        return sumatoria;
+    }
+
 }
