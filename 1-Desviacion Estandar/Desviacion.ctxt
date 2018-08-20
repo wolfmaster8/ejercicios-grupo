@@ -2,4 +2,10 @@
 comment0.target=Desviacion
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment2.params=numeros
+comment2.target=double\ calculaPromedio(int[])
+comment3.params=numeros\ promedio
+comment3.target=double\ calculaSumatoria(int[],\ double)
+comment4.params=numeros\ sumatoria
+comment4.target=double\ calculaDesviacion(int[],\ double)
+numComments=5
