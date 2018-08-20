@@ -2,7 +2,7 @@
 /**
  *
  * @authors Felipe Lobo, Alexis Chacon, Sergio Baron, Pablo Roman
- * @version 0.1a
+ * @version 0.3a
  */
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -28,6 +28,7 @@ public class Desviacion
         }
         
         for(int i = 0; i<numeros.length; i++){
+            //test
             System.out.println("-");
             System.out.println(numeros[i]);
         }
