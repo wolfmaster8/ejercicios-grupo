@@ -54,6 +54,7 @@ public class Vectores
             recorredor(n1, n2, len1, len2);
         }else{
             //evalua la matriz 1 en la 2
+            recorredor(n2, n1, len2, len1);
         }
     }
     
@@ -72,34 +73,36 @@ public class Vectores
         
         
         for(int c : grande){
-            
-            System.out.println(grande[c-1]);
-            repetido = buscar(pequena, grande[c-1]);
-            
-            //System.out.println("Buscando en Pequeña-->"+grande[c]);
+            //System.out.println(c);
+            repetido = buscar(pequena, c);
             if(repetido == false){
-                System.out.println("Grande->"+grande[c-1]+"<->NUEVO");
-                solos[contador] = grande[c-1];
+                //System.out.println("Grande->"+c+"<->NUEVO");
+                solos[contador] = c;
                 contador ++;
             }
         };
-        System.out.println("--------sss-------");
+        
         for(int i : pequena){
             
-            System.out.println(i);
+            //System.out.println(i);
             repetido = buscar(grande, i);
             
             //System.out.println("Buscando en Pequeña-->"+grande[c]);
             if(repetido == false){
-                System.out.println("Pequeña->"+i+"<->NUEVO");
+                //System.out.println("Pequeña->"+i+"<->NUEVO");
                 solos[contador] = i;
                 contador ++;
             }
         };
-        System.out.println("---------------");
+        System.out.println("---------------\nLos valores no repetidos son:\n");
+        Arrays.sort(solos);
         for(int c: solos){
-            System.out.println(c);
+            if(c!=0){
+                System.out.println(c);
+            }
+            
         }
+        System.out.println("---------------");
         //System.out.println();
     }
 }
