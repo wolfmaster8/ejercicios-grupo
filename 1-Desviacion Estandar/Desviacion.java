@@ -27,11 +27,7 @@ public class Desviacion
             contador++;
         }
         
-        for(int i = 0; i<numeros.length; i++){
-            //test
-            System.out.println("-");
-            System.out.println(numeros[i]);
-        }
+        
         
     }
 }
